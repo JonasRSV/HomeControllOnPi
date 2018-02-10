@@ -7,40 +7,29 @@ HOUSE = pre_process.get_house()
 
 print(HOUSE)
 
+dan1 = HOUSE.lamps[16]
+dan2 = HOUSE.lamps[17]
+dan3 = HOUSE.lamps[18]
 
-
-VardagsLampa1 = HOUSE.lamps[1]
-
-print(VardagsLampa1)
-
-VardagsLampa1.turn_on()
-VardagsLampa1.set_brigthness(200)
-VardagsLampa1.set_transition_time(10)
-VardagsLampa1.set_alert(lamps.Alerts.LSELECT)
-VardagsLampa1.send_command()
-
-
-DanLampa1 = HOUSE.lamps[16]
-DanLampa1.turn_on()
-DanLampa1.set_brigthness(200)
-DanLampa1.set_effect(lamps.Effects.COLORLOOP)
-DanLampa1.send_command()
-
-
-time.sleep(7)
-
-DanLampa1.set_effect(lamps.Effects.NONE)
-DanLampa1.send_command()
-
-time.sleep(2)
-
-DanLampa1.turn_off()
-DanLampa1.send_command()
+# dan1.set_effect(lamps.Effects.NONE)
+# dan2.set_effect(lamps.Effects.NONE)
+# dan3.set_effect(lamps.Effects.NONE)
 
 
 
+dan1.set_effect(lamps.Effects.COLORLOOP)
+dan2.set_effect(lamps.Effects.COLORLOOP)
+dan3.set_effect(lamps.Effects.COLORLOOP)
 
 
+# dan1.turn_on()
+# dan2.turn_on()
+# dan3.turn_on()
 
 
+dan1.send_command()
+time.sleep(1)
+dan2.send_command()
+time.sleep(1)
+dan3.send_command()
 

@@ -46,7 +46,7 @@ class Lamp(object):
 
     def __str__(self):
         """Overloaded toString method."""
-        return self.name + " " + str(self.id_number) + " " + str(self.on)
+        return self.name + " id: " + str(self.id_number) + " on: " + str(self.on)
 
     def turn_off(self):
         """Turn the light off."""
@@ -84,8 +84,9 @@ class Dimmable(Lamp):
 
     def __str__(self):
         """Overloaded toString method."""
-        return self.name + " " + str(self.id_number) + " " + str(self.on)\
-            + " " + str(self.bri) + " " + str(self.alert)
+        return self.name + " id: " + str(self.id_number) + ", on: " +\
+            str(self.on) + ", brigthness: " + str(self.bri) +\
+            ", alert: " + str(self.alert)
 
     def set_brigthness(self, bri):
         """Set brigthness of lamp."""
@@ -122,18 +123,14 @@ class ColorTemperature(Dimmable):
 
     def __str__(self):
         """Overloaded toString method."""
-        return self.name + " " + str(self.id_number) + " " + str(self.on)\
-            + " " + str(self.bri) + " " + str(self.ct) + " " + str(self.alert)
+        return self.name + ", id: " + str(self.id_number) + ", on: " +\
+            str(self.on) + ", brigthness: " + str(self.bri) + ", ct: " +\
+            str(self.ct) + ", alert: " + str(self.alert)
 
     def set_ct(self, ct):
         """Set the temperature, values between 153 -> 500 works."""
         self.ct = ct
         self.command["ct"] = self.ct
-
-    def set_alert(self, alert):
-        """Set alert of lamp."""
-        self.alert = alert
-        self.command["alert"] = self.alert
 
 
 class ColorExtended(ColorTemperature):
@@ -165,10 +162,11 @@ class ColorExtended(ColorTemperature):
 
     def __str__(self):
         """Overloaded toString method."""
-        return self.name + " " + str(self.id_number) + " " + str(self.on)\
-            + " " + str(self.bri) + " " + str(self.ct) + " " + str(self.sat)\
-            + " " + str(self.hue) + " " + str(self.xy) + " " + str(self.alert)\
-            + " " + str(self.effect)
+        return self.name + ", id: " + str(self.id_number) + ", on: " +\
+            str(self.on) + ", brigthness: " + str(self.bri) +\
+            ", ct: " + str(self.ct) + ", alert: " + str(self.alert) +\
+            ", hue: " + str(self.hue) + ", xy: " + str(self.xy) + ", sat " \
+            + str(self.sat) + ", effect: " + str(self.effect)
 
     def set_hue(self, hue):
         """Set hue of lamp."""
