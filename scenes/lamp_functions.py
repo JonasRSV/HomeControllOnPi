@@ -1,11 +1,9 @@
-import music
-import lamps
-import pre_process
+import scenes.lamps as lamps
+import scenes.pre_process as pre_process
 import time
 
-
-def run():
-    """Run sad moment skill."""
+def lf1():
+    """Controll Lamps."""
     HOUSE = pre_process.get_house()
 
     v1 = HOUSE.lamps[1]
@@ -54,29 +52,4 @@ def run():
     v3.send_command()
     window.send_command()
     ball.send_command()
-    music.play_song_by_name(music.some_song_names.MAD_WORLD)
-
-    for i in range(10):
-        music.set_volume(10 * i)
-        time.sleep(2)
-
-    time.sleep(5)
-
-    toggle = True
-    for i in range(30):
-        if toggle:
-            ball.set_brigthness(1)
-            ball.send_command()
-            toggle = False
-        else:
-            ball.set_brigthness(255)
-            ball.send_command()
-            toggle = True
-
-        time.sleep(5)
-
-    for i in range(10):
-        music.set_volume(100 - 10*i)
-
-    music.stop_song()
 

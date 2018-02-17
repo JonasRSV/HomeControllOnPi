@@ -1,4 +1,8 @@
 import sys
+from multiprocessing import Process
+from scenes import scenes
+import random
+
 
 class AUDIO_DIRECTIVES(object):
     """Class for audio directives."""
@@ -64,7 +68,7 @@ def play_handler(text="Okay then", url=None):
     return build_response(
         build_responselet(
             text,
-            [AUDIO_DIRECTIVES.START("https://open.spotify.com/track/3HWOO3iq2MV38JQa3FMIaf?si=qaRnu2TdQECmb-Y-WlUFqQ")],
+            [AUDIO_DIRECTIVES.START(url)]
         )
     )
 
@@ -92,22 +96,31 @@ def undefined_behavior():
 class INTENT_HANDLERS(object):
     """Alexa Intents."""
 
-    PLAY = "AMAZON.PlayIntent"
-    STOP = "AMAZON.StopIntent"
-    Party = "Party"
-
-    handlers = {
-        STOP: stop_handler,
-        Party: play_handler
-    }
-
     def handle(evt_name):
         """Handle incomming events."""
-        return play_handler()
+        sys.stdout.write("Recieved " + str(evt_name) + " Intent")
+        sys.stdout.flush()
+
+        if evt_name == "AMAZON.StopIntent" or evt_name == "AMAZON.PauseIntent":
+            return stop_handler()
+
+        for scene in scenes.SCENES:
+            if scene.name == evt_name:
+                if scene.lamp_function is not None:
+                    Process(target=scene.lamp_function).start()
+
+                if scene.music_url is not None:
+                    return play_handler(scene.text, random.choice(scene.music_url))
+                else:
+                    return respond_handler(scene.text)
+
+        return undefined_behavior()
 
 
 def lambda_handler(event):
     """Entry point where requests is recieved and handled."""
+    # sys.stdout.write(str(event))
+    # sys.stdout.flush()
     try:
         request_type = event["request"]["type"]
 
