@@ -1,0 +1,39 @@
+*** House ***
+
+Groups:
+Name: LivingRoom
+V1 id: 1, on: True, brigthness: 127, alert: none
+V2 id: 2, on: True, brigthness: 127, alert: none
+V3 id: 3, on: True, brigthness: 127, alert: none
+Window, id: 5, on: False, brigthness: 127, ct: 454, alert: none
+
+Name: Kitchen
+K1 id: 8, on: True, brigthness: 127, alert: none
+K3 id: 10, on: True, brigthness: 127, alert: none
+K4 id: 11, on: True, brigthness: 127, alert: none
+K2 id: 15, on: True, brigthness: 127, alert: none
+
+Name: BestRoom
+The Room, id: 7, on: False, brigthness: 1, ct: 153, alert: none, hue: 41491, xy: [0.312, 0.328], sat 78, effect: none
+Ball, id: 19, on: True, brigthness: 0, ct: 0, alert: none, hue: 0, xy: [0.0, 0.0], sat 0, effect: none
+
+
+Lamps:
+V1 id: 1, on: True, brigthness: 127, alert: none
+V2 id: 2, on: True, brigthness: 127, alert: none
+V3 id: 3, on: True, brigthness: 127, alert: none
+Bathroom, id: 4, on: False, brigthness: 126, ct: 367, alert: none, hue: 8402, xy: [0.4578, 0.41], sat 140, effect: none
+Window, id: 5, on: False, brigthness: 127, ct: 454, alert: none
+Table, id: 6, on: False, brigthness: 254, ct: 366, alert: none
+The Room, id: 7, on: False, brigthness: 1, ct: 153, alert: none, hue: 41491, xy: [0.312, 0.328], sat 78, effect: none
+K1 id: 8, on: True, brigthness: 127, alert: none
+K3 id: 10, on: True, brigthness: 127, alert: none
+K4 id: 11, on: True, brigthness: 127, alert: none
+H1 id: 12, on: True, brigthness: 156, alert: none
+H2 id: 13, on: True, brigthness: 156, alert: none
+H3 id: 14, on: True, brigthness: 156, alert: none
+K2 id: 15, on: True, brigthness: 127, alert: none
+MB1, id: 16, on: False, brigthness: 254, ct: 366, alert: none, hue: 14988, xy: [0.4575, 0.4101], sat 141, effect: none
+MB2, id: 17, on: False, brigthness: 254, ct: 366, alert: none, hue: 14988, xy: [0.4575, 0.4101], sat 141, effect: none
+MB3, id: 18, on: False, brigthness: 254, ct: 366, alert: none, hue: 14988, xy: [0.4575, 0.4101], sat 141, effect: none
+Ball, id: 19, on: True, brigthness: 0, ct: 0, alert: none, hue: 0, xy: [0.0, 0.0], sat 0, effect: none
