@@ -1,6 +1,8 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import sys
 import requests
+import alexa
+import json
 
 
 def get_addr():
@@ -17,11 +19,11 @@ class HTTPHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         """Handle Get Method."""
         self.send_response(200)
- 
+
         # Send headers
         self.send_header('Content-type', 'text/html')
         self.end_headers()
- 
+
         # Send message back to client
         message = "Hello world!"
         # Write content as utf-8 data
@@ -33,12 +35,17 @@ class HTTPHandler(BaseHTTPRequestHandler):
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
 
+        response = alexa.lambda_handler(json.loads(post_data))
+        json_data = json.dumps(response)
+
+        byte_data = json_data.encode()
+
         self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.send_header('Content-Length', len(post_data))
+        self.send_header('Content-type', 'application/json')
+        self.send_header('Content-Length', len(byte_data))
         self.end_headers()
 
-        self.wfile.write(post_data)
+        self.wfile.write(byte_data)
         return
 
 

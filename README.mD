@@ -2,3 +2,7 @@
 
 
 ### Dependency requests
+
+
+## Using MPD with MPC for Music, because i didnt find any nice online API which does what i need.
+
