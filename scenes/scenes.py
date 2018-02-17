@@ -17,13 +17,8 @@ def get_song(name):
 
 SCENES = [
     Scene("Imagine", "Imagine some stuff, okay?", [get_song("imagine_jl")], lf.lf1),
-    Scene("Chill", "Chillax", [get_song("timber")], lf.lf1)
+    Scene("Chill", "Chillax", [get_song("timber")], lf.lf1),
+    Scene("Wakeup", "Wake up sleepy", [get_song("lejon_konung")], lf.all_lamps_slow)
     ]
-
-
-    
-
-
-""" DEMO FUNCTION FOR a SCENE """
 
 

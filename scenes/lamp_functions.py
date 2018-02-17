@@ -53,3 +53,14 @@ def lf1():
     window.send_command()
     ball.send_command()
 
+
+def all_lamps_slow():
+    """Turn on all lamps in the house in 50 seconds."""
+    HOUSE = pre_process.get_house()
+
+    for id_num, lamp in HOUSE.lamps.items():
+        lamp.turn_on()
+        lamp.set_transition_time(500)
+        lamp.set_brigthness(254)
+        lamp.send_command()
+
