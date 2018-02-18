@@ -41,6 +41,7 @@ i handle calling the lamp function, it has to be called in a new process so not 
 the rest of the program and i'm perhaps not handling that in a good manner. But instead of doing it properly i just let the bashscript restart the server whenever it dies. 
 
 
+## Music...
 Regarding the music. I'd love to be able to play spotify instead of having to hunt for
-links online containing the music i want, buut i couldn't get it working with spotify if anyone has any idé how i can go about making it work, please do tell! 
+links online containing the music i want, buut i couldn't get it working with spotify if anyone has any idea how i can go about making it work, please do tell! 
 
