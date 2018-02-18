@@ -4,6 +4,12 @@
 ## DISCLAIMER: This is not Plug and Play, bunch of things has to be done to make it work this is just supposed to function as a template for creating scenes or inspiration..
 
 
+##Package Dependecies
+requests
+
+Download it using Pip
+
+
 ## Apart from the code here a few other things are needed.
 
 1. A server running https which can host this server, because Alexa only speaks HTTPS. 
