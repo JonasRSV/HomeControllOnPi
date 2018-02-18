@@ -4,7 +4,7 @@
 ## DISCLAIMER: This is not Plug and Play, bunch of things has to be done to make it work this is just supposed to function as a template for creating scenes or inspiration..
 
 
-##Package Dependecies
+## Package Dependecies
 requests
 
 Download it using Pip
