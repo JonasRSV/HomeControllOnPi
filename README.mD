@@ -1,6 +1,8 @@
 # Create Scenes with lights and music with Alexa from a Raspberry Pi
 
 
+## DISCLAIMER: This is not Plug and Play, bunch of things has to be done to make it work this is just supposed to function as a template for creating scenes or inspiration..
+
 
 ## Apart from the code here a few other things are needed.
 
@@ -22,6 +24,10 @@ pointless scene.
 3. A list of music links, Alexa will play one at random.
 4. A function which controlls your lamps.
 
+
+After creating a scene add it to the list and go to the Alexa Dev console 
+and create a skill with intents corresponding to the Scene names and connect the skill 
+to your server and after that everything should work!
 
 ## A few remarks. 
 
