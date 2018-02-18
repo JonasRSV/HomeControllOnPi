@@ -1,3 +1,5 @@
+#!/usr/bin/python3.5
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import sys
 import requests
@@ -35,7 +37,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
 
-        response = alexa.lambda_handler(json.loads(post_data))
+        response = alexa.lambda_handler(json.loads(post_data.decode("utf-8")))
         json_data = json.dumps(response)
 
         byte_data = json_data.encode()
