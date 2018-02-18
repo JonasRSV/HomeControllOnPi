@@ -11,8 +11,9 @@
 3. Alexa needs music links to be able to play it back, you can find mp3 files online of your favorite
    songs, or come up with another way to provide links to music for alexa. 
 
+## How to create scenes
 
-## A few remarks. 
+### Look in the scenes/scenes.py file to see how scenes are made
 
 The Scenes contains 4 fields, all of them are optional.. but leaving them empty creates quite the 
 pointless scene.
@@ -20,6 +21,9 @@ pointless scene.
 2. The Message Alexa will read before starting your scene
 3. A list of music links, Alexa will play one at random.
 4. A function which controlls your lamps.
+
+
+## A few remarks. 
 
 I've made it easy, i hope, to create functions that controll the lamps.
 The pre_process.py file and lamps.py file in scenes will create a HOUSE object 
